@@ -9,7 +9,7 @@ namespace DataStructureAlgorithm
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1. Binary Search\n 2. Insertion Sorting\n 3. Bubble Sorting  ");
+                Console.WriteLine(" 1. Binary Search\n 2. Insertion Sorting\n 3. Bubble Sorting\n 4. Anagram Detection  ");
                 Console.WriteLine("Enter above mention option");
                 int option = Convert.ToInt32(Console.ReadLine());                
                 switch (option)
@@ -30,6 +30,12 @@ namespace DataStructureAlgorithm
                         BubbleSort bubbleSort = new BubbleSort();
                         int[] arr = { 20, 50, 40, 10, 30 };
                         bubbleSort.Sort(arr);
+                        break;
+
+                    case 4:
+                        AnagramDetection anagramDetection = new AnagramDetection();
+                        anagramDetection.CheckAnagram("heart","earth");
+                        anagramDetection.CheckAnagram("heart", "erth");
                         break;
 
                     default:
