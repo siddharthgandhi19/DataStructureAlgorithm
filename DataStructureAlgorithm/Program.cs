@@ -9,7 +9,7 @@ namespace DataStructureAlgorithm
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1. Binary Search\n 2. Insertion Sorting  ");
+                Console.WriteLine(" 1. Binary Search\n 2. Insertion Sorting\n 3. Bubble Sorting  ");
                 Console.WriteLine("Enter above mention option");
                 int option = Convert.ToInt32(Console.ReadLine());                
                 switch (option)
@@ -22,11 +22,17 @@ namespace DataStructureAlgorithm
 
                    case 2:
                         InsertionSort insertionSort = new InsertionSort();
-                        int[] arr = { 2, 5, 4, 1, 3 };
-                        insertionSort.Sort(arr);
+                        int[] binaryArr = { 2, 5, 4, 1, 3 };
+                        insertionSort.Sort(binaryArr);
                         break;
 
-                   default:
+                    case 3:
+                        BubbleSort bubbleSort = new BubbleSort();
+                        int[] arr = { 20, 50, 40, 10, 30 };
+                        bubbleSort.Sort(arr);
+                        break;
+
+                    default:
                         flag = false;
                         Console.WriteLine("Try Again");
                         break;
