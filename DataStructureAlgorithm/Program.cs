@@ -3,13 +3,14 @@ namespace DataStructureAlgorithm
 {
     class Program
     {
+        public static string textPath = @"E:\Bridgelabz\DataStructureAlgorithm\DataStructureAlgorithm\Files\BinarySearch.txt";
         public static void Main(string[] args)
-        {
+        {            
             Console.WriteLine("Welcome to Stack and Queue problem Statement");
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1. Binary Search\n 2. Insertion Sorting\n 3. Bubble Sorting\n 4. Anagram Detection\n 5. UserInput  ");
+                Console.WriteLine(" 1. Binary Search\n 2. Insertion Sorting\n 3. Bubble Sorting\n 4. Anagram Detectiong\n 5. UnOrdered List  ");
                 Console.WriteLine("Enter above mention option");
                 int option = Convert.ToInt32(Console.ReadLine());                
                 switch (option)
@@ -37,10 +38,9 @@ namespace DataStructureAlgorithm
                         anagramDetection.CheckAnagram("heart","earth");
                         anagramDetection.CheckAnagram("heart", "erth");
                         break;
-
                     case 5:
-                        UserInput input = new UserInput();
-                        input.ReplaceString();
+                        UnOrderedList unOrderedList = new UnOrderedList();
+                        unOrderedList.ReadAllTextFile(textPath);
                         break;
 
                     default:
