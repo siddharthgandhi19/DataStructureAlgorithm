@@ -12,7 +12,7 @@ namespace DataStructureAlgorithm
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1. Binary Search\n 2. Insertion Sorting\n 3. Bubble Sorting\n 4. Anagram Detectiong\n 5. UnOrdered List\n 6. Ordered List\n 7. Balance Parentheses  ");
+                Console.WriteLine(" 1. Binary Search\n 2. Insertion Sorting\n 3. Bubble Sorting\n 4. Anagram Detectiong\n 5. UnOrdered List\n 6. Ordered List\n 7. Balance Parentheses\n ");
                 Console.WriteLine("Enter above mention option");
                 int option = Convert.ToInt32(Console.ReadLine());                
                 switch (option)
@@ -49,8 +49,8 @@ namespace DataStructureAlgorithm
                         orderedList.ReadTextFile(numberPath);
                         break;
                     case 7:
-                        BalancedParanthesis checkk = new BalancedParanthesis();
-                        checkk.ReadTextFile(paranthesisPath);
+                        BalancedParanthesis check = new BalancedParanthesis();
+                        check.ReadTextFile(paranthesisPath);
                         break;
                     default:
                         flag = false;
