@@ -5,13 +5,14 @@ namespace DataStructureAlgorithm
     {
         public static string textPath = @"E:\Bridgelabz\DataStructureAlgorithm\DataStructureAlgorithm\Files\BinarySearch.txt";
         public static string numberPath = @"E:\Bridgelabz\DataStructureAlgorithm\DataStructureAlgorithm\Files\Number.txt";
+        public static string paranthesisPath = @"E:\Bridgelabz\DataStructureAlgorithm\DataStructureAlgorithm\Files\BalancedParanthesis.txt";
         public static void Main(string[] args)
         {            
             Console.WriteLine("Welcome to Stack and Queue problem Statement");
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1. Binary Search\n 2. Insertion Sorting\n 3. Bubble Sorting\n 4. Anagram Detectiong\n 5. UnOrdered List\n 6. Ordered List  ");
+                Console.WriteLine(" 1. Binary Search\n 2. Insertion Sorting\n 3. Bubble Sorting\n 4. Anagram Detectiong\n 5. UnOrdered List\n 6. Ordered List\n 7. Balance Parentheses  ");
                 Console.WriteLine("Enter above mention option");
                 int option = Convert.ToInt32(Console.ReadLine());                
                 switch (option)
@@ -46,6 +47,10 @@ namespace DataStructureAlgorithm
                     case 6:
                         OrderedList orderedList = new OrderedList();
                         orderedList.ReadTextFile(numberPath);
+                        break;
+                    case 7:
+                        BalancedParanthesis checkk = new BalancedParanthesis();
+                        checkk.ReadTextFile(paranthesisPath);
                         break;
                     default:
                         flag = false;
