@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataStructureAlgorithm.DataStructureAlgorithm;
+using System;
 namespace DataStructureAlgorithm
 {
     class Program
@@ -12,7 +13,7 @@ namespace DataStructureAlgorithm
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1. Binary Search\n 2. Insertion Sorting\n 3. Bubble Sorting\n 4. Anagram Detectiong\n 5. UnOrdered List\n 6. Ordered List\n 7. Balance Parentheses\n ");
+                Console.WriteLine(" 1. Binary Search\n 2. Insertion Sorting\n 3. Bubble Sorting\n 4. Anagram Detectiong\n 5. UnOrdered List\n 6. Ordered List\n 7. Balance Parentheses\n 8. Prime Number Range\n 9. UserInput ");
                 Console.WriteLine("Enter above mention option");
                 int option = Convert.ToInt32(Console.ReadLine());                
                 switch (option)
@@ -51,6 +52,14 @@ namespace DataStructureAlgorithm
                     case 7:
                         BalancedParanthesis check = new BalancedParanthesis();
                         check.ReadTextFile(paranthesisPath);
+                        break;
+                    case 8:
+                        PrimeNumberRange range = new PrimeNumberRange();
+                        range.Range(0, 1000);
+                        break;
+                    case 9:
+                        UserInput input = new UserInput();
+                        input.ReplaceString();
                         break;
                     default:
                         flag = false;
